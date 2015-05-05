@@ -22,9 +22,12 @@ DBSession = sessionmaker(bind = engine)
 #sesion. bat the things a not send to database until commit
 session = DBSession()
 
-
-items = session.query(MenuItem).all()
-for item in items:
-	print item.name
+items = session.query(Restaurant).all()
+itemRest = session.query(MenuItem).all()
+for itemR in items:
+	print itemR.name
+	for item in itemsRest:
+	    print itemR.name
+	    print item.name
 	print "\n"
 
