@@ -25,9 +25,8 @@ session = DBSession()
 items = session.query(Restaurant).all()
 itemRest = session.query(MenuItem).all()
 for itemR in items:
-	print itemR.name
-	for item in itemsRest:
-	    print itemR.name
-	    print item.name
-	print "\n"
+    print "Restaurant:", itemR.name
+    for item in itemRest:
+        print item.name , item.price
+    print "\n"
 
